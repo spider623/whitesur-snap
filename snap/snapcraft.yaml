@@ -1,6 +1,6 @@
 name: whitesur-gtk-theme # you probably want to 'snapcraft register <name>'
 base: core18 # the base snap is the execution environment for this snap
-version: '3.2' # just for humans, typically '1.2+git' or '1.3.2'
+version: '3.2.1' # just for humans, typically '1.2+git' or '1.3.2'
 summary: WiteSur snap port. # 79 char long summary
 description: |
   WhiteSur is a MacOS Big Sur like theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 
@@ -187,6 +187,7 @@ parts:
         snapcraftctl set-version "$(git describe --tags 2>/dev/null || echo 1.0)"
         mkdir -p $SNAPCRAFT_PART_INSTALL/share/themes
         ./install.sh --theme all\
+                     --alt all\
                      --dest $SNAPCRAFT_PART_INSTALL/share/themes
         $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
     stage:
