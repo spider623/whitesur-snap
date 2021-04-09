@@ -219,7 +219,7 @@ parts:
     override-build: |
         snapcraftctl build
         mkdir -p $SNAPCRAFT_PART_INSTALL/share/icons
-        cp -pr dist $SNAPCRAFT_PART_INSTALL/share/icons
+        cp -pr dist $SNAPCRAFT_PART_INSTALL/share/icons/WhiteSur-cursors
         $SNAPCRAFT_STAGE/update-icon-cache.sh $SNAPCRAFT_PART_INSTALL/share/icons
     stage:
       - share/icons/WhiteSur-cursors
