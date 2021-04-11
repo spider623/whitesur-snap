@@ -191,6 +191,7 @@ parts:
                      --alt all\
                      --dest $SNAPCRAFT_PART_INSTALL/share/themes
         $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
+        ls -l $SNAPCRAFT_PART_INSTALL
     stage:
       - share/gtk2/*/gtk-2.0
       - share/themes/*/gtk-3*
