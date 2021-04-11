@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo 'splitting'
+
 set -eux
 
 basedir="$1"
