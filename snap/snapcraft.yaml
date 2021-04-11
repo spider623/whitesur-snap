@@ -207,7 +207,7 @@ parts:
         mkdir -p $SNAPCRAFT_PART_INSTALL/share/themes
         ./install.sh --theme all\
                      --alt all\
-                     --dest $SNAPCRAFT_PART_INSTALL/share/themes && wait 20 
+                     --dest $SNAPCRAFT_PART_INSTALL/share/themes && sleep 5 
         $SNAPCRAFT_STAGE/split-gtk-theme.sh $SNAPCRAFT_PART_INSTALL
     stage:
       - share/gtk2/*/gtk-2.0
